@@ -8,5 +8,10 @@ namespace BasicCSharp.Labo2
 {
     public class Dummy
     {
+
+        public Dummy()
+        {
+                
+        }
     }
 }
