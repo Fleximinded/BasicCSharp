@@ -5,7 +5,16 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labo1", "BasicCSharp.Labo1\BasicCSharp.Labo1.csproj", "{54EA0461-7A45-486A-A416-B77A617BDFAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCSharp.Labo2", "BasicCSharp.Labo2\BasicCSharp.Labo2.csproj", "{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labo2", "BasicCSharp.Labo2\BasicCSharp.Labo2.csproj", "{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "First labo", "First labo", "{714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints", "{4DD34F27-293E-4970-9D04-E1F90593F044}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\BasisCSharp1.pptx = D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\BasisCSharp1.pptx
+		D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\Basiskennis-GIT.pptx = D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\Basiskennis-GIT.pptx
+		Index.txt = Index.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +33,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54EA0461-7A45-486A-A416-B77A617BDFAE} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
+		{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
