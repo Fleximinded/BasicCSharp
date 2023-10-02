@@ -11,8 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "First labo", "First labo", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints", "{4DD34F27-293E-4970-9D04-E1F90593F044}"
 	ProjectSection(SolutionItems) = preProject
-		D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\BasisCSharp1.pptx = D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\BasisCSharp1.pptx
-		D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\Basiskennis-GIT.pptx = D:\Fleximinded\Fleximinded b.v\Projects - Documents\Syntra\2023\Powerpoint\Basiskennis-GIT.pptx
+		Powerpoints\BasisCSharp1.pptx = Powerpoints\BasisCSharp1.pptx
+		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Index.txt = Index.txt
 	EndProjectSection
 EndProject
