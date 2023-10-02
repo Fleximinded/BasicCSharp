@@ -11,7 +11,7 @@ namespace BasicCSharp.Labo2
 
         public Dummy()
         {
-                
+                // comment
         }
     }
 }
