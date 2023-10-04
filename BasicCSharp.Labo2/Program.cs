@@ -15,12 +15,15 @@
             int maxInt = int.MaxValue;
             Console.Write("maxInt = ");
             Console.WriteLine(maxInt);
-            Console.Write("maxInt + 1 = "); 
+            Console.Write("maxInt + 1 = ");
             Console.WriteLine(++maxInt);
             // Oef 4
             ushort maxUShort = ushort.MaxValue;
-            Console.Write("maxUShort = ");  
+            Console.Write("maxUShort = ");
             Console.WriteLine(++maxUShort);
+            // Demo GIT
+            int a = 1;
+            Console.WriteLine(a++);
         }
     }
 }
