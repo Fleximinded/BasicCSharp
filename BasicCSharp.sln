@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Index.txt = Index.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{29EFB962-613C-4F4C-8C71-92FAE53B207C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.Basis", "CSharp.Demo.Basis\CSharp.Demo.Basis.csproj", "{46D22950-12C0-4700-94EB-0C807A524373}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D22950-12C0-4700-94EB-0C807A524373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D22950-12C0-4700-94EB-0C807A524373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D22950-12C0-4700-94EB-0C807A524373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D22950-12C0-4700-94EB-0C807A524373}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{54EA0461-7A45-486A-A416-B77A617BDFAE} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
 		{2138CA0A-C9BC-4D9B-8824-666C0A91A1BC} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
+		{46D22950-12C0-4700-94EB-0C807A524373} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
