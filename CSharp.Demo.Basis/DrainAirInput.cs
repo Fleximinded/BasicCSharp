@@ -14,7 +14,8 @@ namespace CSharp.Demo.Basis
         static DateTime? FlightTime = DateTime.Now;
         static int passangerCount = 0;
         static double price = 0.0;
-        public static void DrainAirInput()
+        static Random rand = new Random();
+        public static bool DrainAirInput()
         {
             Console.Write("Geef je voornaam in: ");
             fistName = Console.ReadLine();
@@ -29,7 +30,7 @@ namespace CSharp.Demo.Basis
             else
             {
                 Console.WriteLine("Foutieve datum");
-                return;
+                return false;
             }
             Console.Write("Geef het aantal passagiers in: ");
 
@@ -41,19 +42,23 @@ namespace CSharp.Demo.Basis
             else
             {
                 Console.WriteLine("Foutief aantal passagiers");
-                return;
+                return false;
             }   
             Console.Write("Geef de max prijs in: ");
             input = Console.ReadLine();
             if(double.TryParse(input, out price))
             {
+                price = rand.Next((int)(price / 2), (int)price);
+                Console.WriteLine($"De prijs per ticket is {price.ToString("C2")}");   
                 Console.WriteLine($"De totale prijs is {(price * (double)passangerCount).ToString("C2")} ");
             }
             else
             {
                 Console.WriteLine("Foutieve prijs");
-                return;
+                return false;
             }
+
+            return true;
         }
         public static void ShowYourelection()
         {

@@ -6,9 +6,19 @@ namespace CSharp.Demo.Basis
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.Unicode;            
-            DrainAir.DrainAirInput();
-            DrainAir.ShowYourelection();
+            Console.OutputEncoding = Encoding.Unicode;
+            if(DrainAir.DrainAirInput())
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                DrainAir.ShowYourelection();
+            }
+            else
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Shit, verkeerd!");
+            }
+
             Console.ReadKey();
         }
     }
