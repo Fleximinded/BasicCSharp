@@ -11,6 +11,7 @@ namespace BasicCSharp.Labos
             string currentCursor = ">";
             ConsoleColor currentCursorColor = ConsoleColor.Green;
             ConsoleColor backgroundColor = ConsoleColor.Black;
+            ConsoleColor foregroundColor = ConsoleColor.White;
             while(isRunning)
             {
                 ShowCursor(currentCursor, currentCursorColor);
@@ -31,8 +32,14 @@ namespace BasicCSharp.Labos
                     case "setcursor":
                         currentCursor = SetCursor(currentCursor);
                         break;
-                        case "setcursorcolor":
-                            currentCursorColor=SetCursorColor(currentCursorColor,backgroundColor);
+                    case "setcursorcolor":
+                        currentCursorColor = SetCursorColor(currentCursorColor, backgroundColor);
+                        break;
+                    case "setbackgroundcolor":
+                        backgroundColor = SetBackgroundColor(backgroundColor, foregroundColor);
+                        break;
+                    case "setforegroundcolor":
+                        foregroundColor = SetForegroundColor(foregroundColor,backgroundColor);
                         break;
                     default:
                         ShowError($"The command '{input}' is not known in my wonderful system", ConsoleColor.DarkMagenta);
@@ -57,9 +64,10 @@ namespace BasicCSharp.Labos
 
         private static void ShowCursor(string currentCursor, ConsoleColor currentCursorColor)
         {
+            ConsoleColor current=Console.ForegroundColor;
             Console.ForegroundColor = currentCursorColor;
             Console.Write(currentCursor);
-            Console.ResetColor();
+            Console.ForegroundColor = current;
         }
 
         static void ShowError(string message,ConsoleColor errorColor= ConsoleColor.Red)
@@ -80,6 +88,33 @@ namespace BasicCSharp.Labos
             }
             Console.Clear();
             return cursor;
+        }
+        static ConsoleColor SetBackgroundColor(ConsoleColor currentColor,ConsoleColor foreColor) {
+            Console.Write("Enter the new background color: ");
+            string color = Console.ReadLine() ?? "";
+            if(Enum.TryParse<ConsoleColor>(color, true, out ConsoleColor newColor) && newColor != foreColor)
+            {
+                Console.BackgroundColor = newColor;
+                Console.Clear();
+                return newColor;
+            }
+            else
+            {
+                Console.WriteLine($"The color '{color}' is not valid ");
+            }
+            return currentColor;
+        }
+        static ConsoleColor SetForegroundColor(ConsoleColor foreColor, ConsoleColor backgroundColor)
+        {
+            Console.Write("Enter the new forground color: ");
+            string color = Console.ReadLine() ?? "";
+            if(Enum.TryParse<ConsoleColor>(color, true, out ConsoleColor newColor) && newColor != backgroundColor)
+            {
+                Console.ForegroundColor = newColor;
+                Console.Clear();
+                return newColor;
+            }
+            return foreColor;
         }
     }
 }
