@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 
 namespace BasicCSharp.Labos
@@ -52,13 +53,29 @@ namespace BasicCSharp.Labos
                     case "celsius":
                         CalculateCelsius(); 
                         break;
+                        case "verwijderchar":
+                        RemoveChar();
+                        break;
                     default:
                         ShowError($"The command '{input}' is not known in my wonderful system", ConsoleColor.DarkMagenta);
                         break;
                 }
             }
         }
-
+        private static void RemoveChar()
+        {
+            Console.Write("Geef een woord van minstens 4 letters :");
+            string word = Console.ReadLine() ?? "";
+            int index = GetUserInputAsInt("Geef de positie van de letter die je wil verwijderen", "De positie moet een getal zijn !");
+            if(word.Length >= 4 && index >= 0 && index < word.Length)
+            {
+                Console.WriteLine($"Het woord {word} zonder de letter op positie {index} is {word.Remove(index, 1)}");
+            }
+            else
+            {
+                ShowError($"Het woord moet minstens 4 letters bevatten en de positie moet een getal zijn die binnen het woord '{word}' valt !");
+            }
+        }
         private static void CalculateCelsius()
         {
             int celsius = GetUserInputAsInt("Geef de temperatuur in Celsius");
@@ -66,7 +83,6 @@ namespace BasicCSharp.Labos
             int kelvin = celsius + 273;
             Console.WriteLine($"De temperatuur in Celsius ({celsius})°C, is in Fahrenheit {fahrenheit}°F en is in Kelvin {kelvin}°K");
         }
-
         private static ConsoleColor SetCursorColor(ConsoleColor currentCursorColor, ConsoleColor backgroundColor)
         {
             Console.Write("Enter the new cursor color: ");
@@ -80,7 +96,6 @@ namespace BasicCSharp.Labos
             ShowError($"The value '{color}' is not a valid color");
             return currentCursorColor;
         }
-
         private static void ShowCursor(string currentCursor, ConsoleColor currentCursorColor)
         {
             ConsoleColor current=Console.ForegroundColor;
@@ -88,7 +103,6 @@ namespace BasicCSharp.Labos
             Console.Write(currentCursor);
             Console.ForegroundColor = current;
         }
-
         static void ShowError(string message,ConsoleColor errorColor= ConsoleColor.Red)
         {
             ConsoleColor oldColor=Console.ForegroundColor;
@@ -140,7 +154,6 @@ namespace BasicCSharp.Labos
             double number2 = GetUserInputAsDouble("Geef een tweede getal", "Opgepast, foute ingave. Het getal wordt 0");
             Console.WriteLine($"Het resultaat van {number1} + {number2} = {(number1 + number2).ToString("N2")}");
         }
-
         private static void CalculateBirthdayInfo()
         {
             Console.WriteLine("Geef uw geboortedag");
@@ -175,8 +188,7 @@ namespace BasicCSharp.Labos
             }
             ShowError(errorMsg);
             return 0;
-        }
-      
+        }      
         static double GetUserInputAsDouble(string msg="Give a double",string errorMsg="Error")
         {
             double userinput = 0;   
