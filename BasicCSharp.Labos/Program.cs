@@ -41,13 +41,20 @@ namespace BasicCSharp.Labos
                     case "setforegroundcolor":
                         foregroundColor = SetForegroundColor(foregroundColor,backgroundColor);
                         break;
+                    case "telop":
+                    case "addnumbers":
+                        AddDecimalNumbers();
+                        break;
+                    case "birthday":
+                    case "verjaardag":
+                        CalculateBirthdayInfo();
+                        break;
                     default:
                         ShowError($"The command '{input}' is not known in my wonderful system", ConsoleColor.DarkMagenta);
                         break;
                 }
             }
         }
-
         private static ConsoleColor SetCursorColor(ConsoleColor currentCursorColor, ConsoleColor backgroundColor)
         {
             Console.Write("Enter the new cursor color: ");
@@ -115,6 +122,50 @@ namespace BasicCSharp.Labos
                 return newColor;
             }
             return foreColor;
+        }
+        static void AddDecimalNumbers() {
+            double number1 = GetUserInputAsDouble("Geef een eerste getal","Opgepast, foute ingave. Het getal wordt 0");
+            double number2 = GetUserInputAsDouble("Geef een tweede getal", "Opgepast, foute ingave. Het getal wordt 0");
+            Console.WriteLine($"Het resultaat van {number1} + {number2} = {(number1 + number2).ToString("N2")}");
+        }
+
+        private static void CalculateBirthdayInfo()
+        {
+            int day = GetUserInputAsInt("Geef uw geboortedag");
+            DateTime birtday = new DateTime(GetDateInput("jaar", 2023), GetDateInput("maand", 12), GetDateInput("dag", 31));
+            TimeSpan calculation = DateTime.Now - birtday;
+            Console.WriteLine($"U leefde reeds {(int)calculation.TotalHours} uren of {(long)calculation.TotalSeconds} seconden");
+        }
+        static int GetDateInput(string msg,int max, string errorMsg = "De waarde is niet geldig")
+        {
+            int result = GetUserInputAsInt($"Geef uw {msg}", errorMsg);
+            if(result>0 && result<=max) { return result; }
+            return 1;   
+        }
+        static int GetUserInputAsInt(string msg = "Give a Int", string errorMsg = "Error")
+        {
+            int userinput = 0;
+            Console.Write($"{msg} : ");
+            string input = Console.ReadLine() ?? "";
+            if(int.TryParse(input, out userinput))
+            {
+                return userinput;
+            }
+            ShowError(errorMsg);
+            return 0;
+        }
+      
+        static double GetUserInputAsDouble(string msg="Give a double",string errorMsg="Error")
+        {
+            double userinput = 0;   
+            Console.Write($"{msg} : ");
+            string input = Console.ReadLine() ?? "";   
+            if(double.TryParse(input,out userinput) )
+            {
+                return userinput;
+            }
+            ShowError(errorMsg);
+            return 0;
         }
     }
 }
