@@ -131,16 +131,26 @@ namespace BasicCSharp.Labos
 
         private static void CalculateBirthdayInfo()
         {
-            int day = GetUserInputAsInt("Geef uw geboortedag");
+            Console.WriteLine("Geef uw geboortedag");
             DateTime birtday = new DateTime(GetDateInput("jaar", 2023), GetDateInput("maand", 12), GetDateInput("dag", 31));
             TimeSpan calculation = DateTime.Now - birtday;
             Console.WriteLine($"U leefde reeds {(int)calculation.TotalHours} uren of {(long)calculation.TotalSeconds} seconden");
         }
-        static int GetDateInput(string msg,int max, string errorMsg = "De waarde is niet geldig")
+        static int GetDateInput(string msg, int max, string errorMsg = "De waarde is niet geldig")
         {
-            int result = GetUserInputAsInt($"Geef uw {msg}", errorMsg);
-            if(result>0 && result<=max) { return result; }
-            return 1;   
+            int result = 0;
+            while(true)
+            {
+                result = GetUserInputAsInt($"Geef uw {msg}", errorMsg);
+                if(result > 0 && result <= max)
+                {
+                    return result;
+                }
+                else
+                {
+                    ShowError($"De waarde moet tussen 1 en {max} zijn.");
+                }
+            }
         }
         static int GetUserInputAsInt(string msg = "Give a Int", string errorMsg = "Error")
         {
