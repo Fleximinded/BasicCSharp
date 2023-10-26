@@ -49,12 +49,24 @@ namespace BasicCSharp.Labos
                     case "verjaardag":
                         CalculateBirthdayInfo();
                         break;
+                    case "celsius":
+                        CalculateCelsius(); 
+                        break;
                     default:
                         ShowError($"The command '{input}' is not known in my wonderful system", ConsoleColor.DarkMagenta);
                         break;
                 }
             }
         }
+
+        private static void CalculateCelsius()
+        {
+            int celsius = GetUserInputAsInt("Geef de temperatuur in Celsius");
+            int fahrenheit = ((celsius * 18) / 10) + 32;
+            int kelvin = celsius + 273;
+            Console.WriteLine($"De temperatuur in Celsius ({celsius})°C, is in Fahrenheit {fahrenheit}°F en is in Kelvin {kelvin}°K");
+        }
+
         private static ConsoleColor SetCursorColor(ConsoleColor currentCursorColor, ConsoleColor backgroundColor)
         {
             Console.Write("Enter the new cursor color: ");
@@ -151,7 +163,7 @@ namespace BasicCSharp.Labos
                     ShowError($"De waarde moet tussen 1 en {max} zijn.");
                 }
             }
-        }
+        }       
         static int GetUserInputAsInt(string msg = "Give a Int", string errorMsg = "Error")
         {
             int userinput = 0;
