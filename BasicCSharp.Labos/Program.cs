@@ -56,11 +56,60 @@ namespace BasicCSharp.Labos
                         case "verwijderchar":
                         RemoveChar();
                         break;
+                    case "macht-int":
+                        CalculatePower(GetUserInputAsInt("Geef een int"),GetUserInputAsInt("Geef de macht"));
+                        break;
+                    case "macht-long":
+                        CalculatePower(GetUserInputAsLong("Geef een long"), GetUserInputAsInt("Geef de macht"));
+                        break;
+                    case "macht-double":
+                        CalculatePower(GetUserInputAsDouble("Geef een double"), GetUserInputAsInt("Geef de macht"));
+                        break;
+                    case "macht-decimal":
+                        CalculatePower(GetUserInputAsDecimal("Geef een decimal"), GetUserInputAsInt("Geef de macht"));
+                        break;
                     default:
                         ShowError($"The command '{input}' is not known in my wonderful system", ConsoleColor.DarkMagenta);
                         break;
                 }
             }
+        }
+
+        private static void CalculatePower(int value, int pow)
+        {
+            int result = value;
+            for(int i=0;i<pow - 1;i++)
+            {
+                result *= value;
+            }
+            Console.WriteLine($"De macht van {value} tot de macht {pow} is {result}");   
+        }
+        private static void CalculatePower(long value, int pow)
+        {
+            var result= value; 
+            for(int i = 0; i < pow-1; i++)
+            {
+                result *= value;
+            }
+            Console.WriteLine($"De macht van {value} tot de macht {pow} is {result}");
+        }
+        private static void CalculatePower(double value, int pow)
+        {
+            var result = value;
+            for(int i = 0; i < pow-1; i++)
+            {
+                result *= value;
+            }
+            Console.WriteLine($"De macht van {value} tot de macht {pow} is {result}");
+        }
+        private static void CalculatePower(decimal value, int pow)
+        {
+            var result = value;
+            for(int i = 0; i < pow - 1; i++)
+            {
+                result *= value;
+            }
+            Console.WriteLine($"De macht van {value} tot de macht {pow} is {result.ToString("n2")}");
         }
         private static void RemoveChar()
         {
@@ -178,7 +227,7 @@ namespace BasicCSharp.Labos
             }
         }       
         static int GetUserInputAsInt(string msg = "Give a Int", string errorMsg = "Error")
-        {
+        {            
             int userinput = 0;
             Console.Write($"{msg} : ");
             string input = Console.ReadLine() ?? "";
@@ -195,6 +244,30 @@ namespace BasicCSharp.Labos
             Console.Write($"{msg} : ");
             string input = Console.ReadLine() ?? "";   
             if(double.TryParse(input,out userinput) )
+            {
+                return userinput;
+            }
+            ShowError(errorMsg);
+            return 0;
+        }
+        static decimal GetUserInputAsDecimal(string msg = "Give a decimal", string errorMsg = "Error")
+        {
+            decimal userinput = 0;
+            Console.Write($"{msg} : ");
+            string input = Console.ReadLine() ?? "";
+            if(decimal.TryParse(input, out userinput))
+            {
+                return userinput;
+            }
+            ShowError(errorMsg);
+            return 0;
+        }
+        static long GetUserInputAsLong(string msg = "Give a long", string errorMsg = "Error")
+        {
+            long userinput = 0;
+            Console.Write($"{msg} : ");
+            string input = Console.ReadLine() ?? "";
+            if(long.TryParse(input, out userinput))
             {
                 return userinput;
             }
