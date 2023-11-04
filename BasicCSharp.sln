@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Powerpoints\BasisCSharp-Code.pptx = Powerpoints\BasisCSharp-Code.pptx
 		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
+		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
 		Index.txt = Index.txt
 	EndProjectSection
 EndProject
@@ -21,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{29EFB962-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Demo.Basis", "CSharp.Demo.Basis\CSharp.Demo.Basis.csproj", "{46D22950-12C0-4700-94EB-0C807A524373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCSharp.Labos", "BasicCSharp.Labos\BasicCSharp.Labos.csproj", "{E53A3A18-5DE3-421D-ABD1-E32F2BA01497}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labos", "BasicCSharp.Labos\BasicCSharp.Labos.csproj", "{E53A3A18-5DE3-421D-ABD1-E32F2BA01497}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
