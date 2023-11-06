@@ -24,6 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Demo.Basis", "CSharp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labos", "BasicCSharp.Labos\BasicCSharp.Labos.csproj", "{E53A3A18-5DE3-421D-ABD1-E32F2BA01497}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8B8CE27C-BD80-40E2-AABB-53E040BA3800}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Examenopdracht-basis-logica.docx = Documents\Examenopdracht-basis-logica.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
