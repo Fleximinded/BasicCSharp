@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
 		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
+		docker.txt = docker.txt
 		Index.txt = Index.txt
 	EndProjectSection
 EndProject
