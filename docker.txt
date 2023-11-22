@@ -1,3 +1,10 @@
+Voorbeeld paswoord:
 K0nijn+Pruim3n!
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=K0nijn+Pruim3n!' -p 11433:1433 -d fleximinded/drainair:latest --restart=always --name=drainair
-```
+
+Docker image met data:
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=K0nijn+Pruim3n!' --restart=always --name=drainair -p 11433:1433 -d fleximinded/drainair:latest
+
+Download de pure SQL Server on Docker :
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=K0nijn+Pruim3n!" --restart=always --name=drainair -p 11433:1433 -d mcr.microsoft.com/mssql/server:2022-latest

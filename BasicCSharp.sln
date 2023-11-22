@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
 		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
-		docker.txt = docker.txt
-		Index.txt = Index.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{29EFB962-613C-4F4C-8C71-92FAE53B207C}"
@@ -27,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labos", "BasicC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8B8CE27C-BD80-40E2-AABB-53E040BA3800}"
 	ProjectSection(SolutionItems) = preProject
+		docker.txt = docker.txt
 		Documents\Examenopdracht-basis-logica.docx = Documents\Examenopdracht-basis-logica.docx
+		Index.txt = Index.txt
 	EndProjectSection
 EndProject
 Global
