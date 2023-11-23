@@ -26,6 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8B8CE27C-BD80-40E2-AABB-53E040BA3800}"
 	ProjectSection(SolutionItems) = preProject
 		docker.txt = docker.txt
+		Documents\DrainAir.sql = Documents\DrainAir.sql
 		Documents\Examenopdracht-basis-logica.docx = Documents\Examenopdracht-basis-logica.docx
 		Index.txt = Index.txt
 	EndProjectSection
