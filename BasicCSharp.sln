@@ -25,15 +25,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicCSharp.Labos", "BasicC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8B8CE27C-BD80-40E2-AABB-53E040BA3800}"
 	ProjectSection(SolutionItems) = preProject
-		docker.txt = docker.txt
-		Documents\DrainAir.sql = Documents\DrainAir.sql
 		Documents\Examenopdracht-basis-logica.docx = Documents\Examenopdracht-basis-logica.docx
-		Index.txt = Index.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{06C79185-8CC5-4740-B2A0-5345A009D40C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportDbData", "ImportDbData\ImportDbData.csproj", "{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportDbData", "ImportDbData\ImportDbData.csproj", "{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9295F78E-28F9-4DBD-8179-55CEADAAEB89}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Data\Countries.json = Documents\Data\Countries.json
+		Documents\Data\DrainAir.sql = Documents\Data\DrainAir.sql
+		Documents\Data\zipcode-belgium.json = Documents\Data\zipcode-belgium.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{CAB95902-72EB-4C67-8B37-97AA422F2D33}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Info\docker.txt = Documents\Info\docker.txt
+		Documents\Info\Index.txt = Documents\Info\Index.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +81,8 @@ Global
 		{46D22950-12C0-4700-94EB-0C807A524373} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 		{E53A3A18-5DE3-421D-ABD1-E32F2BA01497} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
 		{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB} = {06C79185-8CC5-4740-B2A0-5345A009D40C}
+		{9295F78E-28F9-4DBD-8179-55CEADAAEB89} = {8B8CE27C-BD80-40E2-AABB-53E040BA3800}
+		{CAB95902-72EB-4C67-8B37-97AA422F2D33} = {8B8CE27C-BD80-40E2-AABB-53E040BA3800}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
