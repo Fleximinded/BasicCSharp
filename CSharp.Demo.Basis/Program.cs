@@ -23,9 +23,7 @@ namespace CSharp.Demo.Basis
                             {
                                 if(winkelLijst != null)
                                 {
-                                    if(winkelLijst.Add(command[1], command[2], command[3])) { 
-                                    
-                                    }
+                                    winkelLijst.Add(command[1], command[2], command[3]);
                                 }
                                 else {
                                     Console.WriteLine("Maak eerst een lijst aan");

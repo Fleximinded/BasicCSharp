@@ -46,6 +46,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{CAB95902-7
 		Documents\Info\Index.txt = Documents\Info\Index.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Simple.Class", "CSharp.Simple.Class\CSharp.Simple.Class.csproj", "{C5FF42CF-BF51-4084-B099-C36C44330744}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FF42CF-BF51-4084-B099-C36C44330744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FF42CF-BF51-4084-B099-C36C44330744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FF42CF-BF51-4084-B099-C36C44330744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FF42CF-BF51-4084-B099-C36C44330744}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{EFFB007B-649D-4F8F-AEC8-3A58A0377EDB} = {06C79185-8CC5-4740-B2A0-5345A009D40C}
 		{9295F78E-28F9-4DBD-8179-55CEADAAEB89} = {8B8CE27C-BD80-40E2-AABB-53E040BA3800}
 		{CAB95902-72EB-4C67-8B37-97AA422F2D33} = {8B8CE27C-BD80-40E2-AABB-53E040BA3800}
+		{C5FF42CF-BF51-4084-B099-C36C44330744} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
