@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints", "{4DD34F27-293E-4970-9D04-E1F90593F044}"
 	ProjectSection(SolutionItems) = preProject
 		Powerpoints\BasisCSharp-Code.pptx = Powerpoints\BasisCSharp-Code.pptx
+		Powerpoints\BasisCSharp-OO.pptx = Powerpoints\BasisCSharp-OO.pptx
 		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
 		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
