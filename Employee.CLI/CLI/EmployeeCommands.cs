@@ -51,6 +51,8 @@ namespace Employee.CLI.CLI
         }
         private bool Execute(string rawCommand,string command, string[] parameters)
         {
+            object myEmployeeclass = Employees;
+            EmployeeItem otherRef = (EmployeeItem)myEmployeeclass;
             if(string.IsNullOrEmpty(command)) return false;
             switch(command.ToLower())
             {
