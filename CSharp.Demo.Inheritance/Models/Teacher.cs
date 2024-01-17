@@ -17,9 +17,9 @@ namespace CSharp.Demo.Inheritance
         }
         public List<string> Topics { get; set; } = new List<string>();
 
-        public new string ShowProperties()
+        public new string Print()
         {
-            string topic = $"{base.ShowProperties()} Geeft volgende vakken:";
+            string topic = $"{base.Print()} Geeft volgende vakken:";
             string sep = string.Empty;
             foreach(var item in Topics)
             {
@@ -28,16 +28,6 @@ namespace CSharp.Demo.Inheritance
             }
             return topic;
         }
-        public override string ToString()
-        {
-            string topic = $"{base.ToString()} Geeft volgende vakken:" ;
-            string sep = string.Empty;  
-            foreach(var item in Topics)
-            {
-                topic += $"{sep}{item}";
-                sep = " ,";
-            }
-            return topic;
-        }
+     
     }
 }

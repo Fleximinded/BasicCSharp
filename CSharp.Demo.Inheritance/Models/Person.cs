@@ -12,13 +12,8 @@ namespace CSharp.Demo.Inheritance
         public string LastName { get; set; } = string.Empty;
         public DateTime? BirthDate { get; set; } = null;
 
-        public string ShowProperties() {
+        public string Print() {
             return $"{FirstName} {LastName}";
-        }
-
-        public override string ToString()
-        {
-            return $"{FirstName} {LastName}";
-        }
+        }     
     }
 }

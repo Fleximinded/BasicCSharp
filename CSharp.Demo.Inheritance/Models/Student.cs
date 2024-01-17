@@ -17,25 +17,16 @@ namespace CSharp.Demo.Inheritance
         }
         public Dictionary<string, double> Results { get; set; } = new();
 
-        public new string ShowProperties()
+        public new string Print()
         {
-            string results = base.ShowProperties();
+            string results = $"Student {base.Print()} behaalde volgende resultaten: ";
+            string seperator = string.Empty;    
             foreach(var item in Results)
             {
-                results += $" Vak {item.Key} = {item.Value.ToString()} / 10";
+                results += $"{seperator}Vak {item.Key} = {item.Value.ToString()} / 10";
+                seperator = ", ";
             }
             return results;            
-        }
-
-
-        public override string ToString()
-        {
-            string results = base.ToString();  
-            foreach(var item in Results)
-            {
-                results += $" Vak {item.Key} = {item.Value.ToString()} / 10";
-            }
-            return results;
         }
     }
 }
