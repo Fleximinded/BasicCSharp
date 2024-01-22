@@ -8,9 +8,9 @@ namespace CSharp.Demo.Interfaces.Contracts
 {
     public interface IPerson
     {
-        public string FirstName { get; set; } 
-        public string LastName { get; set; } 
-        public DateTime? BirthDate { get; set; }
+        public string FirstName { get;  } 
+        public string LastName { get;  } 
+        public DateTime? BirthDate { get;  }
         public string Print();
     }
 }
