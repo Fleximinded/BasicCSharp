@@ -12,8 +12,9 @@ namespace CSharp.Demo.Inheritance
         public string LastName { get; set; } = string.Empty;
         public DateTime? BirthDate { get; set; } = null;
 
-        public string Print() {
+        public string EarlyBindingPrint() {
             return $"{FirstName} {LastName}";
-        }     
+        }
+        public virtual string RealPrint() => EarlyBindingPrint();
     }
 }

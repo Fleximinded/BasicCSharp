@@ -17,9 +17,9 @@ namespace CSharp.Demo.Inheritance
         }
         public Dictionary<string, double> Results { get; set; } = new();
 
-        public new string Print()
+        public new string EarlyBindingPrint()
         {
-            string results = $"Student {base.Print()} behaalde volgende resultaten: ";
+            string results = $"Student {base.EarlyBindingPrint()} behaalde volgende resultaten: ";
             string seperator = string.Empty;    
             foreach(var item in Results)
             {
@@ -28,5 +28,6 @@ namespace CSharp.Demo.Inheritance
             }
             return results;            
         }
+        public override string RealPrint() => $"Ik ben een student en behaalde: {Environment.NewLine} {EarlyBindingPrint()}";
     }
 }

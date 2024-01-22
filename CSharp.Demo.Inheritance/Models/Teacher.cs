@@ -17,9 +17,9 @@ namespace CSharp.Demo.Inheritance
         }
         public List<string> Topics { get; set; } = new List<string>();
 
-        public new string Print()
+        public new string EarlyBindingPrint()
         {
-            string topic = $"{base.Print()} Geeft volgende vakken:";
+            string topic = $"{base.EarlyBindingPrint()} Geeft volgende vakken:";
             string sep = string.Empty;
             foreach(var item in Topics)
             {
@@ -28,6 +28,7 @@ namespace CSharp.Demo.Inheritance
             }
             return topic;
         }
-     
+        public override string RealPrint() => $"Ik ben een leerkracht met volgende informatie: {Environment.NewLine} {EarlyBindingPrint()}";
+       
     }
 }
