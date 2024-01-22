@@ -10,7 +10,7 @@ namespace Employee.CLI.CLI
 {
     public class EmployeeCommands
     {
-        EmployeeList Employees { get; set; } = new EmployeeList();
+        PersonList Persons { get; set; } = new PersonList();
         public static bool RunCLI(string[] args) {
             EmployeeCommands commands = new EmployeeCommands();
             return commands.Run(args);
@@ -51,8 +51,6 @@ namespace Employee.CLI.CLI
         }
         private bool Execute(string rawCommand,string command, string[] parameters)
         {
-            //object myEmployeeclass = Employees;
-            //EmployeeItem otherRef = (EmployeeItem)myEmployeeclass;
             if(string.IsNullOrEmpty(command)) return false;
             switch(command.ToLower())
             {
@@ -67,13 +65,55 @@ namespace Employee.CLI.CLI
                     Console.WriteLine(rawCommand.Replace(command, " "));
                     break;
                 case "seed":
+                case "seeddata":
                     SeedData();
-                    Console.WriteLine($"Data is seeded with {Employees.List.Count} items");
+                    Console.WriteLine($"Data is seeded with {Persons.List.Count} items");
+                    break;
+                case "contact":
+                case "send":
+                    if(parameters.Length > 1)
+                    {
+                        string sendMsg = rawCommand.Replace(command, "");
+                        sendMsg = sendMsg.Replace(parameters[0], "").Trim(' ');
+                        foreach(var message in Persons.SendMessage(sendMsg, parameters[0])) {
+                            Console.WriteLine(message ?? "");
+                            Console.WriteLine();
+                        }
+                    }
+                    else
+                    {
+                        ShowError("Gelieve een titel en boodschap mee te geven aub");
+                    }
+                    break;
+                case "show":
+                    PersonList.PersonType selectedType = PersonList.PersonType.All;
+                    if(parameters.Length == 1)
+                    {
+                        switch(parameters[0].ToLower()) {
+                            case "-e":
+                            case "-employee":
+                            case "-w":
+                            case "-werknemer":
+                                selectedType = PersonList.PersonType.Employee;
+                                break;
+                            case "-c":
+                            case "-client":
+                            case "-k":
+                            case "-klant":
+                                selectedType = PersonList.PersonType.Client;
+                                break;
+                        }
+                    }
+                    var showItems = Persons.Show(selectedType);
+                    foreach(var item in showItems)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
                     break;
                 case "find":
                     if(parameters.Length > 0)
                     {
-                        var results = Employees.Find(parameters[0]);
+                        var results = Persons.Find(parameters[0]);
                         if(results?.Count() > 0)
                         {
                             string? sepLine = null;
@@ -111,9 +151,10 @@ namespace Employee.CLI.CLI
             Console.ForegroundColor = oldColor;
         }
 
+
         void SeedData() {
-            Employees.List.Clear();
-            EmployeeItem data = new() {FirstName="Filip", LastName="Geens",SocialID ="1234566ABC", CallName="Fluppe"};
+            Persons.List.Clear();
+            Person data = new EmployeeItem() { FirstName = "Filip", LastName = "Geens", SocialID = "1234566ABC", CallName = "Fluppe", InService = DateTime.Now - TimeSpan.FromDays(5000) };
             data.Address.Street = "Oppernederoveronderheembeekseweg";
             data.Address.City = "WilWelRijkMaarTochNie";
             data.Address.HouseNumber = "465 1/2";
@@ -122,8 +163,8 @@ namespace Employee.CLI.CLI
             data.Contacts.Add(new() { Address = "03 0000001", Type = Contact.ContactType.GoodOldPhone, Name="Als den andere niet meer werkt!" });
             data.Contacts.Add(new() { Address = "0475 101010", Type = Contact.ContactType.MobilePhone });
             data.Contacts.Add(new() { Address = "filip.geens@fleximinded.com", Type = Contact.ContactType.Email});
-            Employees.List.Add(data);
-            data = new() { FirstName = "Kristof", LastName = "Mat", SocialID = "HAHA1212789", CallName = "Mat" };
+            Persons.List.Add(data);
+            data = new ClientItem() { FirstName = "Kristof", LastName = "Mat", SocialID = "HAHA1212789", CallName = "Mat", DiscountPercentage=1 };
             data.Address.Street = "Benedensebovenweg";
             data.Address.City = "Berchem";
             data.Address.HouseNumber = "1";
@@ -131,15 +172,15 @@ namespace Employee.CLI.CLI
             data.Contacts.Add(new() { Address = "0475 202222", Type = Contact.ContactType.MobilePhone ,Name="1+" });
             data.Contacts.Add(new() { Address = "0475 303333", Type = Contact.ContactType.MobilePhone ,Name="Amaai mijne Apple"});
             data.Contacts.Add(new() { Address = "kristof.mat@multi.pers", Type = Contact.ContactType.Email });
-            Employees.List.Add(data);
-            data = new() { FirstName = "David", LastName = "Bowie", SocialID = "MTOM12355", CallName = "Mr D" };
+            Persons.List.Add(data);
+            data = new ClientItem() { FirstName = "David", LastName = "Bowie", SocialID = "MTOM12355", CallName = "Mr D", DiscountPercentage=10 };
             data.Address.Street = "Hemels plein";
             data.Address.City = "Hiernamaals";
             data.Address.HouseNumber = "15651458214";
             data.Address.ZipCode = "1";
             data.Contacts.Add(new() { Address = "david.bowie@pieter.sint", Type = Contact.ContactType.Email });
-            Employees.List.Add(data);
-            data = new() { FirstName = "Filip", LastName = "Geubels", SocialID = "COLRUYTHAHAHA", CallName = "Geubels" };
+            Persons.List.Add(data);
+            data = new EmployeeItem() { FirstName = "Filip", LastName = "Geubels", SocialID = "COLRUYTHAHAHA", CallName = "Geubels", InService=DateTime.Now-TimeSpan.FromDays(150), OutService=DateTime.Now+TimeSpan.FromDays(1) };
             data.Address.Street = "Tepelhofweg";
             data.Address.City = "Brussel";
             data.Address.HouseNumber = "111";
@@ -148,7 +189,7 @@ namespace Employee.CLI.CLI
             data.Contacts.Add(new() { Address = "02 1110001", Type = Contact.ContactType.GoodOldPhone, Name = "Als den andere niet meer werkt!" });
             data.Contacts.Add(new() { Address = "0476 506070", Type = Contact.ContactType.MobilePhone });
             data.Contacts.Add(new() { Address = "filip.geubels@colruyt.be", Type = Contact.ContactType.Email });
-            Employees.List.Add(data);
+            Persons.List.Add(data);
         }
     }
 }
