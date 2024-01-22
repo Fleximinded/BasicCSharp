@@ -60,6 +60,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deel-2", "deel-2", "{D9D856
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.CLI-2", "Employee.CLI-2\Employee.CLI-2.csproj", "{EF5F28F4-4DC2-4499-8CC9-05B50FDF1A7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.Interfaces", "CSharp.Demo.Interfaces\CSharp.Demo.Interfaces.csproj", "{7936302C-5B4C-4399-9A15-9CA5A809D0D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{EF5F28F4-4DC2-4499-8CC9-05B50FDF1A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5F28F4-4DC2-4499-8CC9-05B50FDF1A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF5F28F4-4DC2-4499-8CC9-05B50FDF1A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7936302C-5B4C-4399-9A15-9CA5A809D0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7936302C-5B4C-4399-9A15-9CA5A809D0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7936302C-5B4C-4399-9A15-9CA5A809D0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7936302C-5B4C-4399-9A15-9CA5A809D0D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{C1F59A40-8798-41D7-BD21-0825A0DB6F45} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 		{D9D856BB-F1B1-4E70-AB41-7D6C10B96FAF} = {F3AF2B86-B930-4C6E-8BB9-5CAB3B1C2466}
 		{EF5F28F4-4DC2-4499-8CC9-05B50FDF1A7A} = {D9D856BB-F1B1-4E70-AB41-7D6C10B96FAF}
+		{7936302C-5B4C-4399-9A15-9CA5A809D0D3} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
