@@ -27,6 +27,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8B8CE27C-BD80-40E2-AABB-53E040BA3800}"
 	ProjectSection(SolutionItems) = preProject
 		Documents\Examenopdracht-basis-logica.docx = Documents\Examenopdracht-basis-logica.docx
+		Documents\Mondeling-Databases.xlsx = Documents\Mondeling-Databases.xlsx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{06C79185-8CC5-4740-B2A0-5345A009D40C}"
@@ -66,9 +67,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "First", "First", "{2052ADAF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OO", "OO", "{38FC3232-AA88-4DE6-B42D-507B3D76556D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labo.AnimalFarm", "Labo.AnimalFarm\Labo.AnimalFarm.csproj", "{F5634297-D1B2-47B7-836C-DABFB2E9149A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labo.AnimalFarm", "Labo.AnimalFarm\Labo.AnimalFarm.csproj", "{F5634297-D1B2-47B7-836C-DABFB2E9149A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{30BAD444-77CD-433F-8B18-8C944C47FC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{30BAD444-77CD-433F-8B18-8C944C47FC48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.Delegates", "CSharp.Demo.Delegates\CSharp.Demo.Delegates.csproj", "{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.GenericTypes", "CSharp.Demo.GenericTypes\CSharp.Demo.GenericTypes.csproj", "{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -124,6 +129,14 @@ Global
 		{30BAD444-77CD-433F-8B18-8C944C47FC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BAD444-77CD-433F-8B18-8C944C47FC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30BAD444-77CD-433F-8B18-8C944C47FC48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +160,8 @@ Global
 		{38FC3232-AA88-4DE6-B42D-507B3D76556D} = {714F1FB1-72B0-4B60-BD3F-6B4E3798D9CF}
 		{F5634297-D1B2-47B7-836C-DABFB2E9149A} = {38FC3232-AA88-4DE6-B42D-507B3D76556D}
 		{30BAD444-77CD-433F-8B18-8C944C47FC48} = {38FC3232-AA88-4DE6-B42D-507B3D76556D}
+		{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
+		{D95E7CF9-A221-44AC-ACE9-C4654378B8AD} = {29EFB962-613C-4F4C-8C71-92FAE53B207C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}
