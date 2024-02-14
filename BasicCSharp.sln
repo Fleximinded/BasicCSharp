@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Powerpoints\Basiskennis-GIT.pptx = Powerpoints\Basiskennis-GIT.pptx
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
 		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
+		Powerpoints\Projectmanagement.pptx = Powerpoints\Projectmanagement.pptx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{29EFB962-613C-4F4C-8C71-92FAE53B207C}"
@@ -71,9 +72,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labo.AnimalFarm", "Labo.Ani
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{30BAD444-77CD-433F-8B18-8C944C47FC48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.Delegates", "CSharp.Demo.Delegates\CSharp.Demo.Delegates.csproj", "{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Demo.Delegates", "CSharp.Demo.Delegates\CSharp.Demo.Delegates.csproj", "{BBB0B90E-8B68-4F0E-8CD6-2EB49423DE20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Demo.GenericTypes", "CSharp.Demo.GenericTypes\CSharp.Demo.GenericTypes.csproj", "{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Demo.GenericTypes", "CSharp.Demo.GenericTypes\CSharp.Demo.GenericTypes.csproj", "{D95E7CF9-A221-44AC-ACE9-C4654378B8AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
