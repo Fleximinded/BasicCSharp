@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powerpoints", "Powerpoints"
 		Powerpoints\Basiskennis-Logica.pptx = Powerpoints\Basiskennis-Logica.pptx
 		Powerpoints\Databanken-SQL.pptx = Powerpoints\Databanken-SQL.pptx
 		Powerpoints\Projectmanagement.pptx = Powerpoints\Projectmanagement.pptx
+		Powerpoints\Web-inleiding.pptx = Powerpoints\Web-inleiding.pptx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{29EFB962-613C-4F4C-8C71-92FAE53B207C}"
