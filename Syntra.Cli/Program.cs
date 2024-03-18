@@ -1,4 +1,5 @@
 ﻿using Syntra.Cli.Runtime;
+using Syntra.MyProject.Lib;
 
 namespace Syntra.Cli
 {
@@ -6,8 +7,9 @@ namespace Syntra.Cli
     {
         static void Main(string[] args)
         {
-
-            CliRuntime.Run(args);
+            CliRuntime cliRuntime = new CliRuntime();
+            cliRuntime.AddExecutor(new GreekAccents());
+            cliRuntime.Execute();
         }
     }
 }

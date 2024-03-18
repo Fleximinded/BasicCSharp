@@ -29,7 +29,7 @@ namespace Syntra.Cli.Runtime
             return false;
         }
 
-        internal void Execute()
+        public void Execute()
         {
             while(!DoExit)
             {

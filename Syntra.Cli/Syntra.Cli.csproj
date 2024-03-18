@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Syntra.Cli.Ext\Syntra.Cli.Ext.csproj" />
     <ProjectReference Include="..\Syntra.Cli.Runtime\Syntra.Cli.Runtime.csproj" />
+    <ProjectReference Include="..\Syntra.MyProject.Lib\Syntra.MyProject.Lib.csproj" />
   </ItemGroup>
 
 </Project>

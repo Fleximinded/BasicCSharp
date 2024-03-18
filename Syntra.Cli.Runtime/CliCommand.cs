@@ -13,7 +13,8 @@ namespace Syntra.Cli.Runtime
         public static string OptionSeperator { get; set; } = "--";
         public string Command { get; protected set; } = "";
         public List<ICliCommandParameter> Parameters { get; private set; } = [];
-        public string RawCommand { get; protected set; }
+
+        public string RawCommand { get; protected set; } = "";
         protected CliCommand() { }
         public static CliCommand Parse(string? command)
         {
@@ -52,7 +53,8 @@ namespace Syntra.Cli.Runtime
             return cmd;
         }
 
-
-
+        public ICliCommandParameter? FindOption(string optionName, bool useCase = false)
+            => Parameters.Where(p => !useCase ? p.Option.ToLower() == optionName.ToLower() : p.Option == optionName).FirstOrDefault();
+        
     }
 }
