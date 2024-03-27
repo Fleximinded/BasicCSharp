@@ -1,0 +1,26 @@
+﻿@if(SelectedPerson != null)
+{
+    <div class="Friend-Info-Section">
+        <div class="row">
+            <div class="col-6">
+                <div class="Friend-Info-Data">
+                    <p>Voornaam: @SelectedPerson.FirstName</p>
+                    <p>Achternaam: @SelectedPerson.LastName</p>
+
+                    <td>@SelectedPerson.Gender.ToString()</td>
+                </div>
+            </div>
+            @if(SelectedAddress != null)
+            {
+                <div class="col-6">
+                    <div class="Friend-Info-Data">
+                        <p>Street : @SelectedAddress.Street</p>
+                        <p>City : @SelectedAddress.City</p>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+}

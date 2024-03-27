@@ -4,6 +4,11 @@
     flex-direction: column;
 }
 
+.top-section {
+    padding-top: 60px;
+    min-height: 1050px;
+}
+
 main {
     flex: 1;
 }

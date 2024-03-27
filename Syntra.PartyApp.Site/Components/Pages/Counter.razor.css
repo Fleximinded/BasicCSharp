@@ -1,6 +1,11 @@
 ﻿body {
 }
+
 .odd {
     color: aquamarine;
-   background-color: darkgreen;
+    background-color: darkgreen;
+}
+.even {
+    color: lightyellow;
+    background-color: darkred;
 }

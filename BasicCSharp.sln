@@ -93,7 +93,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{06FC17
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Les-1", "Les-1", "{AA2198B4-05EF-4DEE-806C-63459912992A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.PartyApp.Site", "Syntra.PartyApp.Site\Syntra.PartyApp.Site.csproj", "{CC12F6B6-462A-4B27-B2B8-804694B73D9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.PartyApp.Site", "Syntra.PartyApp.Site\Syntra.PartyApp.Site.csproj", "{CC12F6B6-462A-4B27-B2B8-804694B73D9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.PartyApp.Models", "Syntra.PartyApp.Models\Syntra.PartyApp.Models.csproj", "{EAF9D50F-DB19-4E6B-97F0-4546504E50D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oefening-1", "Oefening-1", "{8974FAB9-F541-4E0F-9D95-4E50C70C72E9}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Exercises\Oefening-1-Blazordocx.docx = Documents\Exercises\Oefening-1-Blazordocx.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -181,6 +188,10 @@ Global
 		{CC12F6B6-462A-4B27-B2B8-804694B73D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC12F6B6-462A-4B27-B2B8-804694B73D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC12F6B6-462A-4B27-B2B8-804694B73D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF9D50F-DB19-4E6B-97F0-4546504E50D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF9D50F-DB19-4E6B-97F0-4546504E50D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF9D50F-DB19-4E6B-97F0-4546504E50D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF9D50F-DB19-4E6B-97F0-4546504E50D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,6 +225,8 @@ Global
 		{7ECDD899-7676-4E8C-ACA2-7112CBDEE212} = {BF249254-DC8A-4069-9083-D02A5C2CA6DA}
 		{AA2198B4-05EF-4DEE-806C-63459912992A} = {06FC17B7-F647-479F-BB15-23E1AEAC7B74}
 		{CC12F6B6-462A-4B27-B2B8-804694B73D9B} = {AA2198B4-05EF-4DEE-806C-63459912992A}
+		{EAF9D50F-DB19-4E6B-97F0-4546504E50D2} = {AA2198B4-05EF-4DEE-806C-63459912992A}
+		{8974FAB9-F541-4E0F-9D95-4E50C70C72E9} = {06FC17B7-F647-479F-BB15-23E1AEAC7B74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2775B28-C45F-4515-BCA6-F41B755DDA44}

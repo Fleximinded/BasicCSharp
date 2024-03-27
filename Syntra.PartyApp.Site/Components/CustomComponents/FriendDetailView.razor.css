@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.Friend-Info-Section {
+    margin-top: 40px;
+}
+
+.Friend-Info-Data {
+    min-height: 450px;
+    min-width: 600px;
+    border: 2px solid black;
+}

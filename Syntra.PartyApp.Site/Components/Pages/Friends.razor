@@ -1,0 +1,25 @@
+﻿@page "/friends"
+@using Syntra.PartyApp.Site.Components.CustomComponents
+
+<div class="container">
+    <h1>Vriendenclub</h1>
+    <table>
+        <tr>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>Gender</th>
+            <th />
+        </tr>
+        @foreach(var pers in FriendList)
+        {
+            <tr>
+                <td>@pers.FirstName</td>
+                <td>@pers.LastName</td>
+                <td>@pers.Gender.ToString()</td>
+                <td><button class="SelectButton" @onclick="() => PersonInfoSelected(pers.ID)">Info</button></td>
+            </tr>
+        }
+    </table>
+    <FriendDetailView SelectedPerson=@CurrentSelectedPerson SelectedAddress=@CurrentSelectedAddress />
+</div>
+

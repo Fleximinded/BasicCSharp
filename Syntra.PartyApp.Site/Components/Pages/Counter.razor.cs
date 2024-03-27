@@ -3,7 +3,7 @@
     public partial class Counter
     {
         private int currentCount = 0;
-        string OddClass { get => currentCount % 2 == 0 ? "" : "odd"; }
+        string OddClass { get => currentCount % 2 == 0 ? "even" : "odd"; }
         private void IncrementCount()
         {
             currentCount++;
